@@ -1,0 +1,10 @@
+{
+    "headerData" :{
+        "title" : "Washington State Parks",
+        "img" : {"logo" :"app/assets/photos/state_parks.jpg", "href" : "/"},
+        "links" : {
+            "mountRainier": {"url": "/tbd", "text" : "Visit Mount Rainier"},
+            "saltWater": {"url": "/tbd", "text" : "Visit salt Water Park"}
+        }   
+    }
+}
