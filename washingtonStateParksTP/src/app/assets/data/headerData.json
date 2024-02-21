@@ -4,7 +4,8 @@
         "img" : {"logo" :"app/assets/photos/state_parks.jpg", "href" : "/"},
         "links" : {
             "mountRainier": {"url": "/tbd", "text" : "Visit Mount Rainier"},
-            "saltWater": {"url": "/tbd", "text" : "Visit salt Water Park"}
-        }   
+            "SaltWater": {"url": "/tbd", "text" : "Visit Salt Water Park"},
+            "Olympic": {"url": "/tbd", "text" : "Visit Olympic National Park"}
+        }
     }
 }
