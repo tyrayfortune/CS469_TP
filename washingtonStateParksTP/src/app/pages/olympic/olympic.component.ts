@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './olympic.component.css'
 })
 export class OlympicComponent {
-
 }

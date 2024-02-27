@@ -3,9 +3,9 @@
         "title" : "Washington State Parks",
         "img" : {"logo" :"app/assets/photos/state_parks.jpg", "href" : "/"},
         "links" : {
-            "mountRainier": {"url": "/tbd", "text" : "Visit Mount Rainier"},
-            "SaltWater": {"url": "/tbd", "text" : "Visit Salt Water Park"},
-            "Olympic": {"url": "/tbd", "text" : "Visit Olympic National Park"}
+            "mountRainier": {"url": "/washingtonStateParksTP/src/app/pages/mount-rainier/mount-rainier.component.html", "text" : "Visit Mount Rainier"},
+            "SaltWater": {"url": "washingtonStateParksTP/src/app/pages/olympic/olympic.component.html", "text" : "Visit Salt Water Park"},
+            "Olympic": {"url": "washingtonStateParksTP/src/app/pages/salt-water/salt-water.component.html", "text" : "Visit Olympic National Park"}
         }
     }
 }
