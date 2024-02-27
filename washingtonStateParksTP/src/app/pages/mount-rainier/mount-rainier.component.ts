@@ -1,7 +1,7 @@
 import { Component , NgModule} from '@angular/core';
 import { HeaderComponent } from '../../reusableComponents/header/header.component';
 import { CommonModule } from '@angular/common';
-import { OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-mount-rainier',
