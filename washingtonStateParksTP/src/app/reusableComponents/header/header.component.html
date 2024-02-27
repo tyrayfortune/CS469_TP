@@ -1,20 +1,24 @@
+<!-- header.component.html -->
+<!-- header.component.html -->
 <div class="headerClass">
-    <!-- desktop, if we need 2 dif version, use *ngIf="currentBreakpoint !== 'xs' for desktop to target -->
-    <div class="destkop" >
-        <nav class="navbar navbar-bg">
-            <a class="navbar-brand" [href]="data.headerData.img.href">
-                <img [src]="data.headerData.img.logo" width="30" height="30" alt="image">
-            </a>
-            <div class="navbar-text">
-                <a class="link-text" [href]="data.headerData.links.mountRainier.url"><h5 class="d-inline">{{data.headerData.links.mountRainier.text}}</h5></a>
-                <a class="link-text" [href]="data.headerData.links.SaltWater.url"><h5 class="d-inline">{{data.headerData.links.SaltWater.text}}</h5></a>
-                <a class="link-text" [href]="data.headerData.links.Olympic.url"><h5 class="d-inline">{{data.headerData.links.Olympic.text}}</h5></a>
-            </div>
-        </nav>
-    </div>
+  <!-- desktop, if we need 2 dif version, use *ngIf="currentBreakpoint !== 'xs' for desktop to target -->
+  <div class="desktop">
+    <nav class="navbar navbar-bg">
+      <a class="navbar-brand" href="/"> <!-- Updated href attribute -->
+        <img [src]="data.headerData.img.logo" width="30" height="30" alt="image">
+      </a>
+      <div class="navbar-text">
+        <a class="link-text" href="/mount-rainier"><h5 class="d-inline">Visit Mount Rainier</h5></a>
+        <a class="link-text" href="/olympic-national-park"><h5 class="d-inline">Visit Olympic National Park</h5></a>
+        <a class="link-text" href="/salt-water-state-park"><h5 class="d-inline">Visit Salt Water Park</h5></a>
+      </div>
+    </nav>
+  </div>
+</div>
+
 
     <!--  mobile, not currently in use -->
     <div class="mobile">
 
     </div>
-</div>
+
