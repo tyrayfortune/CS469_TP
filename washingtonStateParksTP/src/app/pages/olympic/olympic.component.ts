@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../reusableComponents/header/header.component';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-olympic',
+  standalone: true,
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './olympic.component.html',
   styleUrl: './olympic.component.css'
 })
@@ -22,12 +23,4 @@ export class OlympicComponent {
     // Add more highlights
   ];
 }
-@NgModule({
-  declarations: [OlympicComponent],
-  imports: [
-    CommonModule,
-    HeaderComponent
-    // Other modules if needed
-  ],
-})
-export class OlympicModule{}
+

@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
+  standalone: true,
+  imports: [CommonModule, HeaderComponent],
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
@@ -25,16 +27,9 @@ export class HomepageComponent {
       alt: 'The breathtaking views from a mountaintop in Washington State.',
     },
   ];
-
-  textContent = 'This is a website that is dedicated to adventuring around in Washington State. Discover hidden gems, explore landscapes, and immerse yourself in nature.';
+  
+  textObj = {
+    textHeader : "Welcome to Discovering the Beauty of Washington!",
+    textContent :"Discover the splendor of Washington State through its majestic parks, where the serene whispers of nature invite you to explore the untamed beauty of the Pacific Northwest. From the rugged coastline of the Olympic Peninsula to the cascading peaks of the Cascade Range, each park is a gateway to adventure, reflection, and awe. Traverse lush rainforests, wander through arid landscapes sculpted by ancient lava flows, and behold waterfalls that carve their way through the heart of verdant valleys. Washington's state parks are more than just patches of protected land—they are chapters in a story, inviting you to be part of the narrative. Whether you're seeking a tranquil retreat or an exhilarating journey, begin your exploration here and let Washington's natural wonders reveal their secrets to you.",
+  }
 }
-
-@NgModule({
-  declarations: [HomepageComponent],
-  imports: [
-    CommonModule,
-    HeaderComponent
-    // Other modules if needed
-  ],
-})
-export class HomepageModule {}

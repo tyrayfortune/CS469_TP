@@ -3,40 +3,47 @@ import { HeaderComponent } from '../../reusableComponents/header/header.componen
 import { CommonModule } from '@angular/common';
 
 
+
 @Component({
+  standalone: true,
+  imports: [CommonModule, HeaderComponent],
   selector: 'app-mount-rainier',
   templateUrl: './mount-rainier.component.html',
-  styleUrl: './mount-rainier.component.css'
+  styleUrl: './mount-rainier.component.scss'
 })
 
 
 export class MountRainierComponent {
-  showContent: boolean[] = [false, false, false, false, false, false, false, false, false];
 
-  toggleContent(index: number): void {
-    this.showContent[index] = !this.showContent[index];
+  data: any = {
+    carousel: [
+      { img: "app/assets/photos/mount-rainier1.jpg", text: "A beautiful view from a dry creekbed during the Washington summertime." },
+      { img: "app/assets/photos/mount-rainier2.jpg", text: "The Mount Fremont Fire Lookout provides a great view looking up some of Mount Rainier's largest glaciers; Emmons and Winthrop Glaciers." },
+      { img: "app/assets/photos/mount-rainier3.jpg", text: "Gobblers Knob Fire Lookouts provides hikers with up close views of Mount Rainier in many weather conditions." },
+      { img: "app/assets/photos/mount-rainier4.jpg", text: "Shriner Peak Fire Lookout stands on its sunny summit in the park's southeast corner." },
+      { img: "app/assets/photos/mount-rainier5.jpg", text: "Louise Lake along Stevens Canyon Road. Highlighted hear is the hidden beauty within the mountains." },
+    ]
+  };
+  slideIndex = 1;
+  ngOnInit() {
+    this.showSlides(this.slideIndex);
   }
 
-  bubbleContent = [
-    "Explore the Wonderland Trail, a stunning 93-mile loop around Mount Rainier.",
-    "Take a scenic drive through Sunrise, the highest point accessible by car in the park.",
-    "Hike to the breathtaking Comet Falls for a refreshing experience.",
-    "Join a ranger-led program to learn more about the park's flora and fauna.",
-    "Experience the beauty of wildflowers in full bloom during the summer months.",
-    "Capture the iconic reflection lakes with Mount Rainier in the background.",
-    "Go snowshoeing or cross-country skiing in the winter wonderland.",
-    "Enjoy a picnic with stunning views at one of the designated picnic areas.",
-    "Stargaze at night and witness the beauty of the starlit sky away from city lights.",
-  ];
+  plusSlides(n: number) {
+    this.showSlides(this.slideIndex += n);
+  }
 
+  currentSlide(n: number) {
+    this.showSlides(this.slideIndex = n);
+  }
+
+  showSlides(n: number) {
+    let slides = this.data.carousel;
+    if (n > slides.length) { this.slideIndex = 1; }
+    if (n < 1) { this.slideIndex = slides.length; }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].display = 'none';
+    }
+    slides[this.slideIndex - 1].display = 'block';
+  }
 }
-
-@NgModule({
-  declarations: [MountRainierComponent],
-  imports: [
-    CommonModule,
-    HeaderComponent
-    // Other modules if needed
-  ],
-})
-export class MountRainierModule{}
