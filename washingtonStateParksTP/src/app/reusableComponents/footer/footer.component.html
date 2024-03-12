@@ -1,1 +1,34 @@
-<p>footer works!</p>
+<div class="container footer-container">
+    <div class="row">
+        <!-- Connect Links -->
+        <div class="col-sm">
+            <h1 class="h1-center">Connect</h1>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let link of data.connectLinks">
+                    <a class="text" href="{{link.link}}">{{link.text}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Travel Links -->
+        <div class="col-sm">
+            <h1 class="h1-center">Outdoor Info</h1>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let link of data.travelLinks">
+                    <a class="text" href="{{link.link}}">{{link.text}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Media Links -->
+        <div class="col-sm">
+            <h1 class="h1-center">Social Media</h1>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let link of data.mediaLinks">
+                    <a class="text" href="{{link.link}}">{{link.text}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../reusableComponents/header/header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../../reusableComponents/header/header.component';
+import { FooterComponent } from '../../reusableComponents/footer/footer.component';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   selector: 'app-salt-water',
   templateUrl: './salt-water.component.html',
   styleUrl: './salt-water.component.css'
@@ -29,12 +32,4 @@ export class SaltWaterComponent {
   ];
 }
 
-@NgModule({
-  declarations: [SaltWaterComponent],
-  imports: [
-    CommonModule,
-    HeaderComponent
-    // Other modules if needed
-  ],
-})
-export class SaltWaterModule{}
+

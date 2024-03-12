@@ -1,12 +1,13 @@
 import { Component , NgModule} from '@angular/core';
-import { HeaderComponent } from '../../reusableComponents/header/header.component';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../../reusableComponents/header/header.component';
+import { FooterComponent } from '../../reusableComponents/footer/footer.component';
 
 
 
 @Component({
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   selector: 'app-mount-rainier',
   templateUrl: './mount-rainier.component.html',
   styleUrl: './mount-rainier.component.scss'

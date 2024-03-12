@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../reusableComponents/header/header.component';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../../reusableComponents/header/header.component';
+import { FooterComponent } from '../../reusableComponents/footer/footer.component';
 @Component({
   selector: 'app-olympic',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './olympic.component.html',
   styleUrl: './olympic.component.css'
 })

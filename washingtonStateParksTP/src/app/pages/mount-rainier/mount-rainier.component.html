@@ -4,9 +4,10 @@
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
-  <div *ngFor="let item of data.carousel; let i = index" class="mySlides fade" [class.fade-in]="i + 1 === slideIndex" [style.display]="i + 1 === slideIndex ? 'block' : 'none'">
+  <div *ngFor="let item of data.carousel; let i = index" class="mySlides fade" 
+  [class.fade-in]="i + 1 === slideIndex" [style.display]="i + 1 === slideIndex ? 'block' : 'none'">
     <div class="numbertext">{{ i + 1 }} / {{ data.carousel.length }}</div>
-    <img [src]="item.img" style="width:100%">
+      <img [src]="item.img" style="width:100%">
     <div class="text"><p class="text">{{ item.text }}</p></div>
   </div>
 
@@ -19,3 +20,5 @@
 <div style="text-align:center">
   <span class="dot" *ngFor="let item of data.carousel; let i = index" [class.active]="i + 1 === slideIndex" (click)="currentSlide(i+1)"></span>
 </div>
+
+<app-footer data="data"></app-footer>
